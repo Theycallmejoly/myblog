@@ -1,0 +1,22 @@
+<!-- blog/templates/blog/home.html -->
+{% extends 'blog/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Blog</h1>
+    <p>Discover interesting articles and posts by various authors. Feel free to explore and enjoy reading!</p>
+
+    <h2>Latest Posts</h2>
+    <ul>
+        {% for post in posts %}
+            <li class="post">
+                <h3 class="post-title">
+                    <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+                </h3>
+                <p class="post-content">{{ post.content|slice:":150" }}...</p>
+                <p>by {{ post.author.username }} on {{ post.created_at|date:"F j, Y" }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
