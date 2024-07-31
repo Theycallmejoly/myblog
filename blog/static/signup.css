@@ -1,0 +1,84 @@
+
+body {
+    font-family: 'Quicksand', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.auth-links {
+    display: flex;
+    gap: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Style the signup container */
+.signup-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the header in the signup page */
+.signup-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-header h2 {
+    color: #007bff; /* Blue color to match the theme */
+    font-size: 28px; /* Increase font size for better prominence */
+    font-weight: bold; /* Make the font bold */
+    border-bottom: 3px solid #007bff; /* Add a border to make it stand out */
+    padding-bottom: 10px; /* Add padding below the text to enhance appearance */
+}
+
+/* Style the form */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Style form fields and buttons */
+.signup-form input,
+.signup-form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.signup-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #0056b3;
+}
