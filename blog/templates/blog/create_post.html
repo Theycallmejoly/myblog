@@ -1,0 +1,23 @@
+<!-- blog/templates/blog/create_post.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <title>Create Post</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Create a New Post</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Create Post</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

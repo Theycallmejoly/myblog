@@ -1,0 +1,22 @@
+<!-- myapp/templates/myapp/my_posts.html -->
+
+{% extends 'blog/base.html' %}
+
+{% block title %}My Posts{% endblock %}
+
+{% block content %}
+    <h1>My Posts</h1>
+    <ul>
+        {% for post in posts %}
+            <li class="post">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content }}</p>
+                <a href="{% url 'post_update' post.pk %}" class="edit-button">Edit</a>
+                <form method="post" action="{% url 'post_delete' post.pk %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

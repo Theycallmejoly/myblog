@@ -120,7 +120,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# settings.py
+
+STATIC_URL = '/static/'
+
+# For development only, add:
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+# For production, ensure you have:
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -128,7 +139,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# settings.py
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -137,5 +147,11 @@ AUTH_PASSWORD_VALIDATORS = [
             'min_length': 8,
         }
     },
-    # Other validators can be added here as needed
 ]
+
+# settings.py
+
+LOGIN_URL = '/login/'
+
+
+
