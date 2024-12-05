@@ -120,13 +120,6 @@ Templates are located in the `templates/blog` directory and include:
 - `post_detail.html`: Displays details of a specific post.
 - `signup.html`: Form for user registration.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
 
 ## Contact
 
